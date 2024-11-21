@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OutFish - Find a Fishing Spot</title>
+  <link rel="stylesheet" href="styles FFS.css">
+</head>
+<body>
+  <div class="app-container">
+    <!-- Sidebar Navigation -->
+    <nav class="sidebar">
+      <h2>OutFish</h2>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#community">Community Feed</a></li>
+        <li><a href="#mycatches">My Catches</a></li>
+        <li><a href="#settings">Settings</a></li>
+      </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="main-content">
+      <!-- Title bar with back button -->
+      <div class="title-bar">
+        <button class="back-button">← Back</button>
+        <h1>Find a Fishing Spot</h1>
+      </div>
+
+      <!-- Filter Section -->
+      <div class="filter-section">
+        <h3>Search and Filter</h3>
+        <label for="species">Fish Species</label>
+        <input type="text" id="species" placeholder="Enter species (e.g., Bass)">
+        
+        <label for="radius">Search Radius</label>
+        <input type="range" id="radius" min="1" max="50" value="10">
+        <p>Radius: <span id="radiusValue">10</span> miles</p>
+
+        <label for="season">Season</label>
+        <select id="season">
+          <option value="all">All Seasons</option>
+          <option value="spring">Spring</option>
+          <option value="summer">Summer</option>
+          <option value="fall">Fall</option>
+          <option value="winter">Winter</option>
+        </select>
+
+        <button type="button" class="apply-filters-btn">Apply Filters</button>
+      </div>
+
+<!-- Map Section -->
+<div class="map-section">
+  <div id="map">
+    <img src="spot example.png" alt="Fishing Spot Map" class="map-image">
+  </div>
+</div>
+
+
+  <script>
+    // JavaScript to update radius value display
+    const radiusInput = document.getElementById('radius');
+    const radiusValue = document.getElementById('radiusValue');
+    radiusInput.addEventListener('input', () => {
+      radiusValue.textContent = radiusInput.value;
+    });
+  </script>
+</body>
+</html>

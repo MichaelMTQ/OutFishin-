@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OutFish - Post and Share Catch</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app-container">
+    <!-- Sidebar Navigation -->
+    <nav class="sidebar">
+      <h2>OutFish</h2>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#community">Community Feed</a></li>
+        <li><a href="#mycatches">My Catches</a></li>
+        <li><a href="#settings">Settings</a></li>
+      </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="main-content">
+      <!-- Title bar with back button -->
+      <div class="title-bar">
+        <button class="back-button">← Back</button>
+        <h1>Post and Share Catch</h1>
+      </div>
+
+      <!-- Post Form Section -->
+      <div class="post-section">
+        <!-- Image Upload and Preview -->
+        <div class="upload-preview">
+          <input type="file" id="file-upload" class="file-input" accept="image/*">
+          <label for="file-upload" class="upload-btn">Upload Image</label>
+          <div class="preview-area">Image preview will appear here</div>
+        </div>
+        
+        <!-- Post Details Form -->
+        <form class="post-form">
+          <label for="title">Title</label>
+          <input type="text" id="title" placeholder="Enter a title for your catch">
+          
+          <label for="species">Fish Species</label>
+          <input type="text" id="species" placeholder="Enter the species">
+          
+          <label for="description">Description</label>
+          <textarea id="description" placeholder="Describe your catch"></textarea>
+
+          <!-- Privacy Settings -->
+          <label for="privacy">Privacy</label>
+          <select id="privacy">
+            <option>Public</option>
+            <option>Friends</option>
+            <option>Private</option>
+          </select>
+
+          <!-- Preview Button -->
+          <button type="button" class="preview-btn">Preview Post</button>
+        </form>
+      </div>
+
+      <!-- Community Feed Section -->
+      <div class="feed-section">
+        <h2>Community Feed</h2>
+        <div class="feed-post">
+          <img src="catch-sample.jpg" alt="Catch Image">
+          <div class="post-content">
+            <p><strong>Username</strong> - Amazing catch today!</p>
+            <p>Description of the fish, location, and story...</p>
+          </div>
+          <div class="post-actions">
+            <button>Like</button>
+            <button>Comment</button>
+            <button>Share</button>
+          </div>
+        </div>
+        <!-- Additional feed posts as needed -->
+      </div>
+    </div>
+  </div>
+</body>
+</html>
