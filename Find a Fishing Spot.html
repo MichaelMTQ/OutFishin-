@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>OutFish - Find a Fishing Spot</title>
-  <link rel="stylesheet" href="styles FFS.css">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <div class="app-container">
@@ -12,9 +12,10 @@
     <nav class="sidebar">
       <h2>OutFish</h2>
       <ul>
-        <li><a href="#home">Home</a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="Find a Fishing Spot.html" class="active">Find a Fishing Spot</a></li>
+        <li><a href="Post & Share.html">Post and Share Catch</a></li>
         <li><a href="#community">Community Feed</a></li>
-        <li><a href="#mycatches">My Catches</a></li>
         <li><a href="#settings">Settings</a></li>
       </ul>
     </nav>
@@ -23,7 +24,7 @@
     <div class="main-content">
       <!-- Title bar with back button -->
       <div class="title-bar">
-        <button class="back-button">← Back</button>
+        <button class="back-button" onclick="history.back()">← Back</button>
         <h1>Find a Fishing Spot</h1>
       </div>
 
@@ -49,13 +50,14 @@
         <button type="button" class="apply-filters-btn">Apply Filters</button>
       </div>
 
-<!-- Map Section -->
-<div class="map-section">
-  <div id="map">
-    <img src="spot example.png" alt="Fishing Spot Map" class="map-image">
+      <!-- Map Section -->
+      <div class="map-section">
+        <div id="map">
+          <img src="spot example.png" alt="Fishing Spot Map" class="map-image">
+        </div>
+      </div>
+    </div>
   </div>
-</div>
-
 
   <script>
     // JavaScript to update radius value display

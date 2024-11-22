@@ -12,9 +12,10 @@
     <nav class="sidebar">
       <h2>OutFish</h2>
       <ul>
-        <li><a href="#home">Home</a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="Find a Fishing Spot.html">Find a Fishing Spot</a></li>
+        <li><a href="Post & Share.html" class="active">Post and Share Catch</a></li>
         <li><a href="#community">Community Feed</a></li>
-        <li><a href="#mycatches">My Catches</a></li>
         <li><a href="#settings">Settings</a></li>
       </ul>
     </nav>
@@ -23,19 +24,22 @@
     <div class="main-content">
       <!-- Title bar with back button -->
       <div class="title-bar">
-        <button class="back-button">← Back</button>
+        <button class="back-button" onclick="history.back()">← Back</button>
         <h1>Post and Share Catch</h1>
       </div>
 
       <!-- Post Form Section -->
       <div class="post-section">
-        <!-- Image Upload and Preview -->
-        <div class="upload-preview">
-          <input type="file" id="file-upload" class="file-input" accept="image/*">
-          <label for="file-upload" class="upload-btn">Upload Image</label>
-          <div class="preview-area">Image preview will appear here</div>
-        </div>
-        
+        <h2>Create Your Catch Post</h2>
+        <form>
+          <!-- Image Upload and Preview -->
+          <div class="upload-preview">
+            <input type="file" id="file-upload" class="file-input" accept="image/*">
+            <label for="file-upload" class="upload-btn">Upload Image</label>
+            <div class="preview-area">Image preview will appear here</div>
+          </div>
+        </form>
+
         <!-- Post Details Form -->
         <form class="post-form">
           <label for="title">Title</label>
@@ -75,7 +79,6 @@
             <button>Share</button>
           </div>
         </div>
-        <!-- Additional feed posts as needed -->
       </div>
     </div>
   </div>
